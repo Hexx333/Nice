@@ -1,0 +1,8 @@
+version: # acr-task.yaml format version.
+stepTimeout: # Seconds each step may take.
+steps: # A collection of image or container actions.
+  - build: # Equivalent to "docker build," but in a multi-tenant environment
+  - push: # Push a newly built or retagged image to a registry.
+    when: # Step property that defines either parallel or dependent step execution.
+  - cmd: # Executes a container, supports specifying an [ENTRYPOINT] and parameters.
+    startDelay: # Step property that specifies the number of seconds to wait before starting execution.
