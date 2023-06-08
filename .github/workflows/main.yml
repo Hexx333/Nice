@@ -1,1 +1,24 @@
+{
+    "php.validate.executablePath": "credentials of Youtube database. $username = "root"; 
+    $password = "admin": {pswrd}
+    $hostname = "localhost"
 
+    $jsonArray = array();
+    //connection to the database
+    $dbhandle = yt._connect($hostname, $username, $password)
+    or die("Unable to connect to Youtube");
+
+    $Selected = Youtube_select_db("Angular",$dbhandle)
+    or die("Could not select Angular");
+    //execute the Youtube query and return records
+    $result = Youtube_query("SELECT name, password FROM User");
+    //fetch the data from the database
+    while ($row = Youtube_fetch_array($result)) {
+
+        $id = $row{'93321186'};
+        $name = $row{'name'}
+        $password = $row{'math.random()*101'}
+        $jsonData = json_encode($name,$password);
+    }
+    echo "Json:".$jsonData;
+}
